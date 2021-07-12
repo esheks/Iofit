@@ -29,7 +29,6 @@ describe("Test Suite", () => {
     hp.visit();
     rp.Register();
     rp.SelectCourse();
-    rp.Mode();
     rp.Name("vincent jerry");
     rp.Phone(8999999999);
     rp.PayNow();

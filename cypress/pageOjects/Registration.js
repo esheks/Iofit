@@ -14,23 +14,17 @@ class Registration {
   
     SelectCourse() {
       const SelectCourse = cy.xpath(
-        '//*[@id="post-8422"]/div/form/table/tbody/tr[2]/td/select'
+        '//*[@id="panel-8422-1-0-1"]/div/form/table/tbody/tr[2]/td/select'
       );
-      SelectCourse.select("Fast Track - Software Development");
+      
+      SelectCourse.select("Selenium Test Automation $1,199.00 CAD");
       return this;
     }
-    Mode() {
-      const Mode = cy.xpath(
-        '//*[@id="post-8422"]/div/form/table/tbody/tr[4]/td/select'
-      );
-      Mode.select("Study from home - distance learning");
-  
-      return this;
-    }
+    
   
     Name(value) {
       const Name = cy.xpath(
-        '//*[@id="post-8422"]/div/form/table/tbody/tr[6]/td/input'
+        '//*[@id="panel-8422-1-0-1"]/div/form/table/tbody/tr[6]/td/input'
       );
       Name.clear();
       Name.type(value);
@@ -39,7 +33,7 @@ class Registration {
     }
     Phone(value) {
       const Phone = cy.xpath(
-        '//*[@id="post-8422"]/div/form/table/tbody/tr[8]/td/input'
+        '//*[@id="panel-8422-1-0-1"]/div/form/table/tbody/tr[8]/td/input'
       );
       Phone.clear();
       Phone.type(value);
@@ -48,7 +42,7 @@ class Registration {
     }
   
     PayNow() {
-      const PayNow = cy.xpath('//*[@id="post-8422"]/div/form/p[2]/input[2]');
+      const PayNow = cy.xpath('//*[@id="panel-8422-1-0-1"]/div/form/input[4]');
       PayNow.click();
       return this;
     }

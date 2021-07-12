@@ -12,23 +12,16 @@ class HomePage {
       home.click();
   
       
-      const course = cy.xpath('//*[@id="panel-7083-1-0-1"]/div/div/div/a');
+      const course = cy.xpath('//*[@id="panel-7083-2-0-1"]/div/div/div/a');
       course.click();
   
 
-      const study = cy.xpath(
-        '//*[@id="main-content"]/section/div[2]/div/div[2]/div[1]/div/div[2]/div/div[2]/h2/a'
-      );
-      study.click();
+      
   
       cy.go("back");
   
      
-      const automation = cy.xpath(
-        '//*[@id="main-content"]/section/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/h2/a'
-      );
-      automation.click();
-      return this;
+     
     }
   }
   
