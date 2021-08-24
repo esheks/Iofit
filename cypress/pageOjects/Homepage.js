@@ -1,8 +1,8 @@
 class HomePage {
-    visit() {
-      cy.visit("https://www.iofit.ca/");
-      cy.viewport(1280, 720);
-    }
+    // visit() {
+    //   cy.visit("https://www.iofit.ca/");
+    //   cy.viewport(1280, 720);
+    // }
   
     home() {
       
@@ -15,8 +15,6 @@ class HomePage {
       const course = cy.xpath('//*[@id="panel-7083-2-0-1"]/div/div/div/a');
       course.click();
   
-
-      
   
       cy.go("back");
   

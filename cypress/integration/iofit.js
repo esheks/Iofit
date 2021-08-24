@@ -4,29 +4,36 @@ import AboutPage from "../pageOjects/AboutPage";
 import Courses from "../pageOjects/courses";
 import Registration from "../pageOjects/Registration";
 describe("Test Suite", () => {
+  beforeEach(()=>{
+    
+      cy.visit("https://www.iofit.ca/");
+      cy.viewport(1280, 720);
+  })
   const hp = new HomePage();
   const ap = new AboutPage();
   const cp = new Courses();
   const rp = new Registration();
 
+
   it("verify home page", () => {
-    hp.visit();
+   // hp.visit();
     hp.home();
   });
 
   it("verify About us", () => {
-    hp.visit();
+//hp.visit();
     ap.About();
   });
 
   it("Courses", () => {
-    hp.visit();
+  //  hp.visit();
     cp.Course();
 
     // Cypress.config("pageLoadTimeout", 500000);
   });
   it("Registration", () => {
-    hp.visit();
+   //
+   // hp.visit();
     rp.Register();
     rp.SelectCourse();
     rp.Name("vincent jerry");
