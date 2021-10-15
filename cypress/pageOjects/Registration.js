@@ -1,7 +1,5 @@
 class Registration {
-    // visit() {
-    //   cy.visit("https://www.iofit.ca/");
-    // }
+   
   
     Register() {
       const Register = cy.xpath(
@@ -11,29 +9,39 @@ class Registration {
   
       return this;
     }
-  
+
+    
     SelectCourse() {
-      const SelectCourse = cy.xpath(
-        '//*[@id="panel-8422-1-0-1"]/div/form/table/tbody/tr[2]/td/select'
+      const SelectCourse = cy.get(
+        '#panel-8422-0-0-2 > .textwidget > form > table > tbody > :nth-child(2) > td > select'
       );
       
-      SelectCourse.select("Selenium Test Automation $1,199.00 CAD");
+      SelectCourse.select("QA-Adv-SQL Manual Testing $1399+GST with $50 off");
+      return this;
+    }
+    City() {
+      const city = cy.xpath(
+        '//*[@id="panel-8422-0-0-2"]/div/form/table/tbody/tr[4]/td/select'
+      );
+      
+      city.select("Edmonton");
       return this;
     }
     
   
     Name(value) {
-      const Name = cy.xpath(
-        '//*[@id="panel-8422-1-0-1"]/div/form/table/tbody/tr[6]/td/input'
+      const Name = cy.get(
+        '#panel-8422-0-0-1 > .textwidget > form > table > tbody > :nth-child(6) > td > input'
       );
       Name.clear();
       Name.type(value);
   
       return this;
     }
+    
     Phone(value) {
-      const Phone = cy.xpath(
-        '//*[@id="panel-8422-1-0-1"]/div/form/table/tbody/tr[8]/td/input'
+      const Phone = cy.get(
+        '#panel-8422-0-0-2 > .textwidget > form > table > tbody > :nth-child(8) > td > input'
       );
       Phone.clear();
       Phone.type(value);
@@ -42,7 +50,7 @@ class Registration {
     }
   
     PayNow() {
-      const PayNow = cy.xpath('//*[@id="panel-8422-1-0-1"]/div/form/input[4]');
+      const PayNow = cy.get('#panel-8422-0-0-2 > .textwidget > form > :nth-child(6) > [type="image"]');
       PayNow.click();
       return this;
     }
